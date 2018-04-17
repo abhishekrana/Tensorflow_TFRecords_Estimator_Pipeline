@@ -60,7 +60,7 @@ datasets
 
 * ./run.sh
 
-## Acknowledgment
+## Acknowledgement
 https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/18_TFRecords_Dataset_API.ipynb
 
 https://github.com/MrGemy95/Tensorflow-Project-Template

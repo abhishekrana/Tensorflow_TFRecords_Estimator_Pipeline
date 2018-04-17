@@ -39,20 +39,33 @@ cd scripts
 
 ## For image classification on new dataset
 * Place the new dataset inside datasets folder. Images of each class should be in be in different folder.
+
 Example:
+
 datasets
+
 ---- knifey_spoony_vanilla
+
 -------- train
+
 ---------------- forky
+
 ---------------- knifey
+
 ---------------- spoony
+
 -------- test
+
 ---------------- forky
+
 ---------------- knifey
+
 ---------------- spoony
 
 * Modify configs/config_knifey_spoony.json "labels", "dataset_path_train" and "dataset_path_test" fields.
+
 * Modify models/model_knifey_spoony.py model_fn() as per requirement.
+
 * ./run.sh
 
 ## Acknowledgment

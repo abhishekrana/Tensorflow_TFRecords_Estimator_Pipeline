@@ -41,26 +41,18 @@ cd scripts
 * Place the new dataset inside datasets folder. Images of each class should be in be in different folder.
 
 Example:
-
+```sh
 datasets
-
----- knifey_spoony_vanilla
-
--------- train
-
----------------- forky
-
----------------- knifey
-
----------------- spoony
-
--------- test
-
----------------- forky
-
----------------- knifey
-
----------------- spoony
+  knifey_spoony_vanilla
+    train
+      forky
+      knifey
+      spoony
+    test
+      forky
+      knifey
+      spoony
+```
 
 * Modify configs/config_knifey_spoony.json "labels", "dataset_path_train" and "dataset_path_test" fields.
 

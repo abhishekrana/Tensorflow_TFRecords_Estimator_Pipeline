@@ -1,7 +1,7 @@
 # Tensorflow_TFRecords_Estimator_Pipeline
 A pipeline/template for
-- Converting dataset in TFRecords
-- Training and evaluating multi-calss image classifier using custom tensorflow estimator
+- Converting dataset to TFRecords.
+- Training and evaluating multi-class image classifier using custom tensorflow estimator.
 
 ## Requirements
 Tensorflow >= 1.4.0
@@ -17,6 +17,12 @@ virtualenv --system-site-packages -p python3 tensorflow170_py35_gpu # for Python
 source tensorflow170_py35_gpu/bin/activate
 easy_install -U pip
 pip3 install --upgrade tensorflow-gpu # for Python 3.n and GPU
+
+# Dependencies
+pip install matplotlib
+pip install bunch
+pip install pudb
+pip install tqdm
 ```
 
 ## Dataset
@@ -31,6 +37,25 @@ cd scripts
 ./run.sh
 ```
 
+## For image classification on new dataset
+* Place the new dataset inside datasets folder. Images of each class should be in be in different folder.
+Example:
+datasets
+---- knifey_spoony_vanilla
+-------- train
+---------------- forky
+---------------- knifey
+---------------- spoony
+-------- test
+---------------- forky
+---------------- knifey
+---------------- spoony
+
+* Modify configs/config_knifey_spoony.json "labels", "dataset_path_train" and "dataset_path_test" fields.
+* Modify models/model_knifey_spoony.py model_fn() as per requirement.
+* ./run.sh
+
 ## Acknowledgment
 https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/18_TFRecords_Dataset_API.ipynb
+
 https://github.com/MrGemy95/Tensorflow-Project-Template
